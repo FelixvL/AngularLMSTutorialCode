@@ -2,9 +2,11 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  templateUrl: './app.component.html'
 })
 export class AppComponent {
-  title = 'my-app';
+  title: string = "Hello Angular";
+  changeTitle($event:any) {
+    this.title = $event.target.value;
+ }
 }
